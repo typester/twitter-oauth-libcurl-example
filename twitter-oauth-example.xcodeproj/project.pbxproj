@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		A087697D126E167500D0D392 /* HomeTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A087697C126E167500D0D392 /* HomeTimelineViewController.m */; };
+		A087697F126E168900D0D392 /* HomeTimelineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A087697E126E168900D0D392 /* HomeTimelineView.xib */; };
+		A08769A1126E192200D0D392 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A0876998126E192200D0D392 /* NSObject+SBJSON.m */; };
+		A08769A2126E192200D0D392 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A087699A126E192200D0D392 /* NSString+SBJSON.m */; };
+		A08769A3126E192200D0D392 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = A087699C126E192200D0D392 /* SBJsonBase.m */; };
+		A08769A4126E192200D0D392 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A087699E126E192200D0D392 /* SBJsonParser.m */; };
+		A08769A5126E192200D0D392 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A08769A0126E192200D0D392 /* SBJsonWriter.m */; };
+		A0BD6D6111CEFF5800B0D9A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BD6D5F11CEFF5800B0D9A3 /* AppDelegate.m */; };
+		A0BD6D6211CEFF5800B0D9A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BD6D6011CEFF5800B0D9A3 /* main.m */; };
+		A0BD6D6511CEFF7600B0D9A3 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BD6D6411CEFF7600B0D9A3 /* MainWindow.xib */; };
+		A0DC33BB126D246300360EED /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DC33BA126D246300360EED /* RootViewController.m */; };
+		A0DC33BD126D247800360EED /* RootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DC33BC126D247800360EED /* RootView.xib */; };
+		A0DC33C1126D26E000360EED /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DC33C0126D26E000360EED /* libcurl.a */; };
+		A0DC33C9126D273E00360EED /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DC33C7126D273E00360EED /* libcrypto.a */; };
+		A0DC33CA126D273E00360EED /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DC33C8126D273E00360EED /* libssl.a */; };
+		A0DC33CC126D277700360EED /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DC33CB126D277700360EED /* libz.dylib */; };
+		A0DC33D3126D285B00360EED /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DC33CE126D285B00360EED /* NSData+Base64.m */; };
+		A0DC33D4126D285B00360EED /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DC33D0126D285B00360EED /* NSString+URLEncoding.m */; };
+		A0DC33D5126D285B00360EED /* OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DC33D2126D285B00360EED /* OAuth.m */; };
+		A0DC3909126E115700360EED /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0DC3908126E115700360EED /* AuthViewController.m */; };
+		A0DC390B126E116700360EED /* AuthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0DC390A126E116700360EED /* AuthView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* twitter-oauth-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "twitter-oauth-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A087697B126E167500D0D392 /* HomeTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTimelineViewController.h; path = src/HomeTimelineViewController.h; sourceTree = "<group>"; };
+		A087697C126E167500D0D392 /* HomeTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTimelineViewController.m; path = src/HomeTimelineViewController.m; sourceTree = "<group>"; };
+		A087697E126E168900D0D392 /* HomeTimelineView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeTimelineView.xib; path = resources/HomeTimelineView.xib; sourceTree = "<group>"; };
+		A0876996126E192200D0D392 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = src/JSON/JSON.h; sourceTree = "<group>"; };
+		A0876997126E192200D0D392 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJSON.h"; path = "src/JSON/NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		A0876998126E192200D0D392 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJSON.m"; path = "src/JSON/NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		A0876999126E192200D0D392 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SBJSON.h"; path = "src/JSON/NSString+SBJSON.h"; sourceTree = "<group>"; };
+		A087699A126E192200D0D392 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SBJSON.m"; path = "src/JSON/NSString+SBJSON.m"; sourceTree = "<group>"; };
+		A087699B126E192200D0D392 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonBase.h; path = src/JSON/SBJsonBase.h; sourceTree = "<group>"; };
+		A087699C126E192200D0D392 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonBase.m; path = src/JSON/SBJsonBase.m; sourceTree = "<group>"; };
+		A087699D126E192200D0D392 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonParser.h; path = src/JSON/SBJsonParser.h; sourceTree = "<group>"; };
+		A087699E126E192200D0D392 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonParser.m; path = src/JSON/SBJsonParser.m; sourceTree = "<group>"; };
+		A087699F126E192200D0D392 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = src/JSON/SBJsonWriter.h; sourceTree = "<group>"; };
+		A08769A0126E192200D0D392 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = src/JSON/SBJsonWriter.m; sourceTree = "<group>"; };
+		A0BD6D5E11CEFF5800B0D9A3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = src/AppDelegate.h; sourceTree = "<group>"; };
+		A0BD6D5F11CEFF5800B0D9A3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = src/AppDelegate.m; sourceTree = "<group>"; };
+		A0BD6D6011CEFF5800B0D9A3 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = src/main.m; sourceTree = "<group>"; };
+		A0BD6D6311CEFF6B00B0D9A3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0BD6D6411CEFF7600B0D9A3 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainWindow.xib; path = resources/MainWindow.xib; sourceTree = "<group>"; };
+		A0BD6D8711CF023400B0D9A3 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = common.h; path = src/common.h; sourceTree = "<group>"; };
+		A0DC33B9126D246300360EED /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = src/RootViewController.h; sourceTree = "<group>"; };
+		A0DC33BA126D246300360EED /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = src/RootViewController.m; sourceTree = "<group>"; };
+		A0DC33BC126D247800360EED /* RootView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RootView.xib; path = resources/RootView.xib; sourceTree = "<group>"; };
+		A0DC33C0126D26E000360EED /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../lib/curl-7.21.1/lib/libcurl.a"; sourceTree = SOURCE_ROOT; };
+		A0DC33C7126D273E00360EED /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../lib/openssl-1.0.0a/lib/libcrypto.a"; sourceTree = SOURCE_ROOT; };
+		A0DC33C8126D273E00360EED /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../lib/openssl-1.0.0a/lib/libssl.a"; sourceTree = SOURCE_ROOT; };
+		A0DC33CB126D277700360EED /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A0DC33CD126D285B00360EED /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "src/NSData+Base64.h"; sourceTree = "<group>"; };
+		A0DC33CE126D285B00360EED /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "src/NSData+Base64.m"; sourceTree = "<group>"; };
+		A0DC33CF126D285B00360EED /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncoding.h"; path = "src/NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		A0DC33D0126D285B00360EED /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncoding.m"; path = "src/NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		A0DC33D1126D285B00360EED /* OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuth.h; path = src/OAuth.h; sourceTree = "<group>"; };
+		A0DC33D2126D285B00360EED /* OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAuth.m; path = src/OAuth.m; sourceTree = "<group>"; };
+		A0DC3907126E115700360EED /* AuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AuthViewController.h; path = src/AuthViewController.h; sourceTree = "<group>"; };
+		A0DC3908126E115700360EED /* AuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AuthViewController.m; path = src/AuthViewController.m; sourceTree = "<group>"; };
+		A0DC390A126E116700360EED /* AuthView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AuthView.xib; path = resources/AuthView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				A0DC33C1126D26E000360EED /* libcurl.a in Frameworks */,
+				A0DC33C9126D273E00360EED /* libcrypto.a in Frameworks */,
+				A0DC33CA126D273E00360EED /* libssl.a in Frameworks */,
+				A0DC33CC126D277700360EED /* libz.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* twitter-oauth-example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				A0BD6D5D11CEFF2500B0D9A3 /* src */,
+				A0BD6D5C11CEFF1F00B0D9A3 /* resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+				A0DC33CB126D277700360EED /* libz.dylib */,
+				A0DC33C0126D26E000360EED /* libcurl.a */,
+				A0DC33C7126D273E00360EED /* libcrypto.a */,
+				A0DC33C8126D273E00360EED /* libssl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0876994126E18D000D0D392 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A0876996126E192200D0D392 /* JSON.h */,
+				A0876997126E192200D0D392 /* NSObject+SBJSON.h */,
+				A0876998126E192200D0D392 /* NSObject+SBJSON.m */,
+				A0876999126E192200D0D392 /* NSString+SBJSON.h */,
+				A087699A126E192200D0D392 /* NSString+SBJSON.m */,
+				A087699B126E192200D0D392 /* SBJsonBase.h */,
+				A087699C126E192200D0D392 /* SBJsonBase.m */,
+				A087699D126E192200D0D392 /* SBJsonParser.h */,
+				A087699E126E192200D0D392 /* SBJsonParser.m */,
+				A087699F126E192200D0D392 /* SBJsonWriter.h */,
+				A08769A0126E192200D0D392 /* SBJsonWriter.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		A0BD6D5C11CEFF1F00B0D9A3 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0BD6D6311CEFF6B00B0D9A3 /* Info.plist */,
+				A0BD6D6411CEFF7600B0D9A3 /* MainWindow.xib */,
+				A0DC33BC126D247800360EED /* RootView.xib */,
+				A0DC390A126E116700360EED /* AuthView.xib */,
+				A087697E126E168900D0D392 /* HomeTimelineView.xib */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		A0BD6D5D11CEFF2500B0D9A3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A0876994126E18D000D0D392 /* JSON */,
+				A087697B126E167500D0D392 /* HomeTimelineViewController.h */,
+				A087697C126E167500D0D392 /* HomeTimelineViewController.m */,
+				A0DC3907126E115700360EED /* AuthViewController.h */,
+				A0DC3908126E115700360EED /* AuthViewController.m */,
+				A0DC33CD126D285B00360EED /* NSData+Base64.h */,
+				A0DC33CE126D285B00360EED /* NSData+Base64.m */,
+				A0DC33CF126D285B00360EED /* NSString+URLEncoding.h */,
+				A0DC33D0126D285B00360EED /* NSString+URLEncoding.m */,
+				A0DC33D1126D285B00360EED /* OAuth.h */,
+				A0DC33D2126D285B00360EED /* OAuth.m */,
+				A0DC33B9126D246300360EED /* RootViewController.h */,
+				A0DC33BA126D246300360EED /* RootViewController.m */,
+				A0BD6D5E11CEFF5800B0D9A3 /* AppDelegate.h */,
+				A0BD6D5F11CEFF5800B0D9A3 /* AppDelegate.m */,
+				A0BD6D8711CF023400B0D9A3 /* common.h */,
+				A0BD6D6011CEFF5800B0D9A3 /* main.m */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* twitter-oauth-example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "twitter-oauth-example" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "twitter-oauth-example";
+			productName = "twitter-oauth-example";
+			productReference = 1D6058910D05DD3D006BFB54 /* twitter-oauth-example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "twitter-oauth-example" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* twitter-oauth-example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0BD6D6511CEFF7600B0D9A3 /* MainWindow.xib in Resources */,
+				A0DC33BD126D247800360EED /* RootView.xib in Resources */,
+				A0DC390B126E116700360EED /* AuthView.xib in Resources */,
+				A087697F126E168900D0D392 /* HomeTimelineView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0BD6D6111CEFF5800B0D9A3 /* AppDelegate.m in Sources */,
+				A0BD6D6211CEFF5800B0D9A3 /* main.m in Sources */,
+				A0DC33BB126D246300360EED /* RootViewController.m in Sources */,
+				A0DC33D3126D285B00360EED /* NSData+Base64.m in Sources */,
+				A0DC33D4126D285B00360EED /* NSString+URLEncoding.m in Sources */,
+				A0DC33D5126D285B00360EED /* OAuth.m in Sources */,
+				A0DC3909126E115700360EED /* AuthViewController.m in Sources */,
+				A087697D126E167500D0D392 /* HomeTimelineViewController.m in Sources */,
+				A08769A1126E192200D0D392 /* NSObject+SBJSON.m in Sources */,
+				A08769A2126E192200D0D392 /* NSString+SBJSON.m in Sources */,
+				A08769A3126E192200D0D392 /* SBJsonBase.m in Sources */,
+				A08769A4126E192200D0D392 /* SBJsonParser.m in Sources */,
+				A08769A5126E192200D0D392 /* SBJsonWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_THUMB_SUPPORT = NO;
+				HEADER_SEARCH_PATHS = (
+					"$HOME/dev/iphone/lib/curl-7.21.1/include",
+					"$HOME/dev/iphone/lib/openssl-1.0.0a/include",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$HOME/dev/iphone/lib/curl-7.21.1/lib",
+					"$HOME/dev/iphone/lib/openssl-1.0.0a/lib",
+				);
+				PRODUCT_NAME = "twitter-oauth-example";
+				SDKROOT = iphoneos4.1;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_THUMB_SUPPORT = NO;
+				HEADER_SEARCH_PATHS = (
+					"$HOME/dev/iphone/lib/curl-7.21.1/include",
+					"$HOME/dev/iphone/lib/openssl-1.0.0a/include",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$HOME/dev/iphone/lib/curl-7.21.1/lib",
+					"$HOME/dev/iphone/lib/openssl-1.0.0a/lib",
+				);
+				PRODUCT_NAME = "twitter-oauth-example";
+				SDKROOT = iphoneos4.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "twitter-oauth-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "twitter-oauth-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
