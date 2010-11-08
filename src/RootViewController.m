@@ -11,6 +11,8 @@
 
 @synthesize signinButton = signinButton_;
 @synthesize homeTimelineButton = homeTimelineButton_;
+@synthesize tweetField = tweetField_;
+@synthesize tweetButton = tweetButton_;
 @synthesize statusLabel = statusLabel_;
 @synthesize loadingView = loadingView_;
 
@@ -30,11 +32,15 @@
 
     if (nil == access_token) {
         self.homeTimelineButton.hidden = YES;
+        self.tweetButton.hidden = YES;
+        self.tweetField.hidden = YES;
         self.statusLabel.text = @"Status: not signed in";
     }
     else {
         self.signinButton.hidden = YES;
         self.homeTimelineButton.hidden = NO;
+        self.tweetButton.hidden = NO;
+        self.tweetField.hidden = NO;
         self.statusLabel.text = [NSString stringWithFormat:@"Status: signed in as %@", [d stringForKey:@"screen_name"]];
     }
 
@@ -49,6 +55,8 @@
 -(void)releaseIBOutlets {
     self.signinButton = nil;
     self.homeTimelineButton = nil;
+    self.tweetField = nil;
+    self.tweetButton = nil;
     self.statusLabel = nil;
     self.loadingView = nil;
 }
@@ -106,6 +114,56 @@
     HomeTimelineViewController* next = [[HomeTimelineViewController alloc] initWithNibName:@"HomeTimelineView" bundle:nil];
     [self.navigationController pushViewController:next animated:YES];
     [next release];
+}
+
+-(IBAction)onPushTweetButton:(id)sender {
+    LOG_CURRENT_METHOD;
+
+    NSUserDefaults* d = [NSUserDefaults standardUserDefaults];
+    NSDictionary* access_token = [d dictionaryForKey:@"access_token"];
+
+    NSString* status = self.tweetField.text;
+    if (nil == status || [status isEqualToString:@""]) {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"please input tweet"
+                                                        message:nil
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        [alert release];
+
+        return;
+    }
+
+
+    NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:
+                                             access_token, @"token",
+                                             status, @"status",
+                                         nil];
+
+    [OAuth tweetParams:params onComplete:^(OAuth* res) {
+        if (nil != res.error) {
+            LOG(@"error: %@", res.error);
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:res.error
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        }
+        else {
+            LOG(@"res: %@", res.content);
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Success!"
+                                                            message:nil
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [alert release];
+        }
+    }];
+
 }
 
 @end

@@ -22,5 +22,6 @@
 +(NSString*)getAuthHeaderForMethod:(NSString*)method URL:(NSString*)url params:(NSDictionary*)params;
 
 +(BOOL)getHomeTimelineParams:(NSDictionary*)params onComplete:(void (^)(OAuth*))callback;
++(BOOL)tweetParams:(NSDictionary*)params onComplete:(void (^)(OAuth*))callback;
 
 @end

@@ -204,6 +204,53 @@ static CURL* curl_init(NSObject* self) {
     return YES;
 }
 
++(BOOL)tweetParams:(NSDictionary*)params onComplete:(void (^)(OAuth*))callback {
+    NSString* url = @"http://api.twitter.com/1/statuses/update.json";
+
+    dispatch_queue_t mq = dispatch_get_main_queue();
+    dispatch_queue_t q  = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+
+    dispatch_async(q, ^{
+        OAuth* api = [OAuth oauth];
+        CURL* curl = curl_init(api);
+        CURLcode res = 0;
+
+        struct curl_slist* slist = NULL;
+        slist = curl_slist_append(slist, "Expect:");
+        slist = curl_slist_append(slist, "Content-Type: application/x-www-form-urlencoded");
+        slist = curl_slist_append(slist, [[OAuth getAuthHeaderForMethod:@"POST" URL:url params:params] UTF8String]);
+        curl_easy_setopt(curl, CURLOPT_HTTPHEADER, slist);
+
+        NSString* content = [NSString stringWithFormat:@"status=%@", [[params objectForKey:@"status"] URLEncodedString]];
+        LOG(@"content: %@", content);
+
+        curl_easy_setopt(curl, CURLOPT_URL, [url UTF8String]);
+        curl_easy_setopt(curl, CURLOPT_POST, 1);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDS, [content UTF8String]);
+        curl_easy_setopt(curl, CURLOPT_POSTFIELDSIZE, strlen([content UTF8String]));
+
+        res = curl_easy_perform(curl);
+
+        if (0 != res) {
+            api.error = [NSString stringWithUTF8String:curl_easy_strerror(res)];
+        }
+        else {
+            NSString* content = [[NSString alloc] initWithData:api.readBuf
+                                                      encoding:NSUTF8StringEncoding];
+            api.content = content;
+            [content release];
+        }
+
+        curl_easy_cleanup(curl);
+
+        dispatch_async(mq, ^{
+            callback(api);
+        });
+    });
+
+    return YES;
+}
+
 +(NSString*)getAuthHeaderForMethod:(NSString*)method URL:(NSString*)url params:(NSDictionary*)params {
     NSNumber* epoch = [NSNumber numberWithInt:(int)[[NSDate date] timeIntervalSince1970]];
 

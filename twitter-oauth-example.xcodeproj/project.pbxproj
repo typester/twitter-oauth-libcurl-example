@@ -279,13 +279,14 @@
 					"$HOME/dev/iphone/lib/openssl-1.0.0a/include",
 				);
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$HOME/dev/iphone/lib/curl-7.21.1/lib",
 					"$HOME/dev/iphone/lib/openssl-1.0.0a/lib",
 				);
 				PRODUCT_NAME = "twitter-oauth-example";
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -302,13 +303,14 @@
 					"$HOME/dev/iphone/lib/openssl-1.0.0a/include",
 				);
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$HOME/dev/iphone/lib/curl-7.21.1/lib",
 					"$HOME/dev/iphone/lib/openssl-1.0.0a/lib",
 				);
 				PRODUCT_NAME = "twitter-oauth-example";
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
